@@ -1,0 +1,4 @@
+<%= form_for @new_team, :url => { :action => "add" }  do |f|  %>
+    <%= f.text_field  :todo_item %>
+    <%= f.submit "Add todo", class: "btn btn-primary" %>
+ <%end%>
