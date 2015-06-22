@@ -19,11 +19,4 @@ class TeamsController < ApplicationController
 			render :index
 		end
 	end
-	def join_team
-		user = current_user.id
-		team = params[:id]
-
-		membership = Membership.new(user_id: user, team_id: team)
-		membership.save
-	end
 end
