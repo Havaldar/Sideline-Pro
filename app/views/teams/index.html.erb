@@ -1,6 +1,11 @@
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+
 <h1>Team Index Page</h1>
 <ul>
 <%@teams.each do |team|%>
-	<li><%=team.name%></li>
+	<li>
+		<%= link_to team.name, team %>
+	</li>
 <%end%>
 </ul>
+

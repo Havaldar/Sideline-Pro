@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'teams' => 'teams#index'
-  get 'teams/:id' => 'teams#show'
-  get 'teams/new' => 'teams#new'
-  post 'teams' => 'teams#create'
+  resources :teams, only: [:index, :show, :new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
