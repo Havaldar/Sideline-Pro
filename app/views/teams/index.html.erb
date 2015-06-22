@@ -1,11 +1,10 @@
 <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 
 <h1>Team Index Page</h1>
+<%= render :partial => 'team_form', :locals => {:team => @team} %>
 <ul>
 <%@teams.each do |team|%>
-	<li>
-		<%= link_to team.name, team %>
-	</li>
+	<li><%= link_to team.name, team %></li>
 <%end%>
 </ul>
 

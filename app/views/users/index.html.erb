@@ -1,6 +1,6 @@
 <h1>User Index Page</h1>
 <ul>
 <%@users.each do |user|%>
-	<li><%=user.name%></li>
+	<li><%= link_to user.name, user %></li>
 <%end%>
 </ul>

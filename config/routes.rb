@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
   resources :teams, only: [:index, :show, :new, :create]
-
-  devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :users, only: [:index, :show]
+  devise_for :users, :controllers => {registrations: 'registrations'}
   root 'teams#index'
-  get 'teams' => 'teams#index'
-  get 'teams/:id' => 'teams#show'
-  get 'teams/new' => 'teams#new'
-  post 'teams' => 'teams#create'
 
+  put 'teams/:id' => 'teams#join_team', as: :join_team
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
