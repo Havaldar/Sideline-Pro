@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   post 'teams/:id' => 'memberships#create', as: 'memberships'
   root 'welcomes#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
