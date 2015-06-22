@@ -1,0 +1,28 @@
+.jumbotron {
+	background-image:url('soccer_player.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 650px;
+}
+
+.jumbotron .container {
+	position: relative;
+	top: 25px;
+}
+
+.jumbotron h1 {
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron p {
+	color: #eee;
+}
+
+.btn-primary {
+	font-size: 16px;
+}
+
+.header {
+	margin-top: -40px;
+}

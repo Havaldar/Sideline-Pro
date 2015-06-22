@@ -9,14 +9,10 @@
 </head>
 <body>
 <% if user_signed_in? %>
-	<%= render :partial => "nav" %>
+	<%= render :partial => "layouts/nav" %>
 <%end%>
 
-<div id="container">
-	<%= yield %>
-</div>
-
-<footer>Copyright Blah Blah 2015</footer>
+<%= yield %>
 
 </body>
 </html>
