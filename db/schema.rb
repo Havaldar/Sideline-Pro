@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622153245) do
+ActiveRecord::Schema.define(version: 20150622155315) do
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
     t.datetime "date"
     t.integer  "team1_id"
     t.integer  "team2_id"
-    t.integer  "lat"
-    t.integer  "lon"
+    t.float    "lat"
+    t.float    "lon"
     t.string   "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,8 +40,6 @@ ActiveRecord::Schema.define(version: 20150622153245) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "position"
-    t.string   "role"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false

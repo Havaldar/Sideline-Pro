@@ -5,8 +5,8 @@ class CreateGames < ActiveRecord::Migration
       t.datetime :date
       t.integer :team1_id
       t.integer :team2_id
-      t.integer :lat
-      t.integer :lon
+      t.float :lat
+      t.float :lon
       t.string :status
 
       t.timestamps null: false
