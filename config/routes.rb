@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
 
   resources :teams, only: [:index, :show, :new, :create]
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  root 'teams#index'
+  get 'teams' => 'teams#index'
+  get 'teams/:id' => 'teams#show'
+  get 'teams/new' => 'teams#new'
+  post 'teams' => 'teams#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
