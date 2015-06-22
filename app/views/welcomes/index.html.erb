@@ -1,5 +1,6 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css'>
 
+
 <% if user_signed_in?%>	
 <% else %>
 	<div class="jumbotron">
@@ -12,6 +13,11 @@
 						<%= link_to('Log In', new_user_session_path, :class => 'btn btn-large btn-primary')  %>
 					</div>
 				</p>
+		</div>
+	</div>
+	<div id="container">
+		<div class="header">
+			<h1>Ever wanted to manage your soccer team like the pros?</h1>
 		</div>
 	</div>
 <% end %> 
