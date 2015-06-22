@@ -1,10 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h1 {
+	color: red;
+}
+
+body {
+	color: blue;
+}
+
+footer {
+	color: red;
+}
+
 #container {
 	background-color: #eee;
-	width: 800px;
 	margin: 0px auto;
 	border: 1px solid #ccc;
+	padding: 15px;
 }
 

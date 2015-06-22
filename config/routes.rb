@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :teams, only: [:index, :show, :new, :create]
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'teams#index'
+  root 'welcomes#index'
   get 'teams' => 'teams#index'
   get 'teams/:id' => 'teams#show'
   get 'teams/new' => 'teams#new'
