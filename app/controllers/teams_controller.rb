@@ -25,8 +25,5 @@ class TeamsController < ApplicationController
 
 		membership = Membership.new(user_id: user, team_id: team)
 		membership.save
-
-
-
 	end
 end
