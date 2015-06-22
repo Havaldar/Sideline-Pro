@@ -1,11 +1,15 @@
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
-		<ul class="nav navbar-nav navbar-left">
-			<li role="presentation"><a href="#">Home</a></li>
-			<li role="presentation"><a href="#">Profile</a></li>
-		</ul>
+		<form class="navbar-form navbar-left" role="search">
+        	<div class="form-group">
+          		<input type="text" class="form-control" placeholder="Search">
+	  				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+			</div>
+      	</form>
 		<ul class="nav navbar-nav navbar-right">
-			<li role="presentation"><a href="#">Messages</a></li>
+			<li role="presentation"><%= link_to 'Home', root_path%></a></li>
+			<li role="presentation"><%= link_to 'Teams', teams_path%></a></li>			
+			<li role="presentation"><a href="#">Profile</a></li>
 			<li role="presentation"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 		</ul>
 	</div>

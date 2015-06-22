@@ -1,1 +1,17 @@
-hi
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css'>
+
+<% if user_signed_in?%>	
+<% else %>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>E.F.C</h1>
+				<p> Clever caption that we have not come up with yet but it will be great trust me</p>
+				<p>
+					<div class="buttons">
+						<%= link_to('Sign Up', new_user_registration_path, :class => 'btn btn-large btn-primary') %>
+						<%= link_to('Log In', new_user_session_path, :class => 'btn btn-large btn-primary')  %>
+					</div>
+				</p>
+		</div>
+	</div>
+<% end %> 
