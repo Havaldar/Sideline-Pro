@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2015-06-22 17:32:45
+  team1_id: 1
+  team2_id: 1
+  lat: 1
+  lon: 1
+  status: MyString
+
+two:
+  name: MyString
+  date: 2015-06-22 17:32:45
+  team1_id: 1
+  team2_id: 1
+  lat: 1
+  lon: 1
+  status: MyString
