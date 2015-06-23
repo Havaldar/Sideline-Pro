@@ -1,13 +1,14 @@
 class GamesController < ApplicationController
 	def show
+		@game = Game.find(params[:id])
 	end
 
 	def create
-		@game = Game.new(params["game"].permit(:name))
+		@game = Game.new(params["game"].permit(:name, :team1_id, :team2_id, :address, :date))
 		if @game.save
-			redirect_to '/games/:id'
+			redirect_to game_path(@game)
 		else
-			render :index
+			redirect_to teams_path
 		end
 	end
 

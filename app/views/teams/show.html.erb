@@ -4,5 +4,5 @@
 <%@team.users.each do |user|%>
 	<li><%= link_to user.name, user_path(user)%></li>
 <%end%>
-<%= render :partial => 'games/game_form', :locals => {:game => @game} %>
+<%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %>
 </ul>
