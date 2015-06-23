@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {registrations: 'registrations'}
+  devise_for :users, :controllers => { registrations: 'registrations'}
  
   resources :teams, only: [:index, :show, :new, :create]
   resources :users, only: [:index, :show]
