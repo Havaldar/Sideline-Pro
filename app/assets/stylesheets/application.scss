@@ -3,11 +3,8 @@
 @import 'welcomes';
 @import "devise";
 @import "user";
-
-
-footer {
-	color: red;
-}
+@import 'games';
+@import "team";
 
 #container {
 	background-color: #eee;
@@ -22,5 +19,5 @@ footer {
 	margin: 0px auto;
 }
 
-@import 'games';
+
 

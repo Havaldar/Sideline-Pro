@@ -1,7 +1,12 @@
-<h1><%=@team.name%></h1>
-<%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
-<ul>
-<%@team.users.each do |user|%>
+<div class=>
+	<div class="container teams">
+		<h1><%=@team.name%></h1>
+		<%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
+		<ul>
+		<%@team.users.each do |user|%>
+		<%= image_tag @team.avatar.url(:medium) %>
+		</div>
+		</div>
 	<li><%= link_to user.name, user_path(user)%></li>
 <%end%>
 <%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %>
