@@ -3,6 +3,7 @@
 <div class="userp-container">
 	<div class = "col-xs-3 col-centered"> 
 		<div class ="verticalLine">
+			<%= image_tag @user.avatar.url(:medium) %>
 			<%=@user.name.upcase%><br/>
 			<%= link_to 'Edit Profile', edit_user_registration_path %>
 		</div>
