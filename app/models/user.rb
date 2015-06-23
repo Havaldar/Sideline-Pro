@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 		:through => :memberships
 
 
-has_attached_file :avatar, :styles => { :medium => "300x300#", :thumb => "200x200#"},
+has_attached_file :avatar, :styles => { :large => "300x300#", :medium => "200x200#", :thumb => "20x20#"},
 :default_url => "missing.png"
 validates_attachment_content_type :avatar, :content_type =>
 /\Aimage\/.*\Z/
