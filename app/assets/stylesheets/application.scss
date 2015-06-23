@@ -7,9 +7,15 @@ footer {
 
 #container {
 	background-color: #eee;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 5px;
+}
+
+#container h2 {
 	margin: 0px auto;
-	border: 1px solid #ccc;
-	padding: 15px;
 }
 
 @import 'welcomes';
