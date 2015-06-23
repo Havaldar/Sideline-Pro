@@ -2,6 +2,7 @@
 <%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
 <ul>
 <%@team.users.each do |user|%>
-	<li><%=user.name%></li>
+	<li><%= link_to user.name, user_path(user)%></li>
 <%end%>
+<%= render :partial => 'games/game_form', :locals => {:game => @game} %>
 </ul>

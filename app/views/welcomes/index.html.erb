@@ -1,20 +1,94 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,300' rel='stylesheet' type='text/css'>
+<%= javascript_include_tag "test" %>
 
-<% if user_signed_in?%>	
-<% else %>
-	<div class="jumbotron">
-		<div class="container">
-			<h1>E.F.C</h1>
-				<p> Clever caption that we have not come up with yet but it will be great trust me</p>
-				<p>
-					<div class="buttons">
-						<%= link_to('Sign Up', new_user_registration_path, :class => 'btn btn-large btn-primary') %>
-						<%= link_to('Log In', new_user_session_path, :class => 'btn btn-large btn-primary')  %>
-					</div>
-				</p>
-		</div>
+<div class="jumbotron">
+	<div class="container ">
+		<h1>Clever Team Name</h1>
+			<p> This is where the clever caption that we have not come up with yet will go... it may not be here but it will be great trust me</p>
+			<p>
+				
+					
+				<div class="modal fade" id="signupModal">
+				  <div class="modal-dialog">
+				    <div class="modal-content" id="signupbox">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">Make An Account</h4>
+				      </div>
+				      <div class="modal-body">
+					    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+						    <%= devise_error_messages! %>
+
+						    <div class="field">
+						      <%= f.label :name %><br />
+						      <%= f.text_field :name, autofocus: true %>
+						    </div>
+						    <div class="field">
+						      <%= f.label :email %><br />
+						      <%= f.email_field :email%>
+						    </div>
+						    <div class="field">
+						      <%= f.label :password %>
+						      <% if @minimum_password_length %>
+						      <em>(<%= @minimum_password_length %> characters minimum)</em>
+						      <% end %><br />
+						      <%= f.password_field :password, autocomplete: "off" %>
+						    </div>
+						    <div class="field">
+						      <%= f.label :password_confirmation %><br />
+						      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+						    </div>
+						    <br/>
+						    <div class="actions">
+						      <%= f.submit "Sign up", :class => 'btn btn-small btn-success' %>
+						    </div>
+						  <% end %>
+				  	  </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">
+					  Sign Up
+					</button>
+					<div class="modal fade" id="loginModal">
+				  <div class="modal-dialog">
+				    <div class="modal-content" id="loginbox">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">Log In To Your Account</h4>
+				      </div>
+				      <div class="modal-body">
+					    <%= form_for(resource, :as => resource_name, :url => session_path(:user)) do |f| %>
+					      <div>
+					        <%= f.label :email %><br />
+					        <%= f.email_field :email, :autofocus => true %>
+					      </div>
+
+					      <div>
+					        <%= f.label :password %><br />
+					        <%= f.password_field :password %>
+					      </div>
+
+					      <% if devise_mapping.rememberable? -%>
+					        <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+					      <% end -%>
+
+					      <%= f.submit "Log in", :class => 'btn btn-small btn-success' %>
+				    	<% end %>
+				  	  </div>
+					  <div class="modal-footer">
+					    <%= render "devise/shared/links" %>
+					  </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
+					  Log In
+					</button>
+			</p>
 	</div>
-	<div class="header">
-		<h1>Ever wanted to manage your soccer team like the pros?</h1>
-	</div>
-<% end %> 
+</div>
+<div class="header">
+	<h1>Ever wanted to manage your soccer team like the pros?</h1>

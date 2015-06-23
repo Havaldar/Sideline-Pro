@@ -4,3 +4,23 @@
 @import "devise";
 @import "user";
 
+
+footer {
+	color: red;
+}
+
+#container {
+	background-color: #eee;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 5px;
+}
+
+#container h2 {
+	margin: 0px auto;
+}
+
+@import 'games';
+

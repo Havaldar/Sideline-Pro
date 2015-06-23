@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'd3_rails'
 gem 'devise'
 
 gem "paperclip", "~> 4.2"

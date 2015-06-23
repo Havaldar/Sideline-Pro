@@ -2,12 +2,13 @@
 	background-image:url('soccer_player.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	height: 650px;
 }
 
 .jumbotron .container {
 	position: relative;
-	top: 25px;
+	top: 10px;
 }
 
 .jumbotron h1 {
@@ -29,4 +30,28 @@
 
 h1 {
 	padding: 10px;
+}
+
+#loginbox {
+	width: 335px;
+	height: auto;
+	margin: auto;
+}
+
+#signupbox {
+	width: 335px;
+	height: auto;
+	margin: auto;
+}
+
+#new_user{
+
+}
+
+#user_email {
+	width: 300px;
+}
+
+#user_password {
+	width: 300px;
 }
