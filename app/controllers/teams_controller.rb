@@ -2,6 +2,9 @@ class TeamsController < ApplicationController
 	def show
 		@team = Team.find(params[:id])
 		@game = Game.new
+		@teams = current_user.teams.map do |team|
+			[team.name, team.id]
+		end
 	end
 
 	def index

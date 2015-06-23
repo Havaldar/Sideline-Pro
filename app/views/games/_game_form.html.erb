@@ -1,6 +1,17 @@
 <%= form_for(game, {:url => "/games"}) do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %>
-  <br/>
-  <%= f.submit %>
+	<% %>
+	<%= f.hidden_field :team1_id, :value => opponent_team%>
+	<%= f.label :name %>:
+	<%= f.text_field :name %>
+	<br/>
+	<%= f.label :your_team%>:
+	<%= f.select(:team2_id, teams)%>
+	<br/>
+	<%= f.label :date %>:
+	<%= f.date_select :date %>
+	<br/>
+	<%= f.label :address %>:
+	<%= f.text_field :address %>
+	<br/>
+	<%= f.submit %>
 <% end %>
