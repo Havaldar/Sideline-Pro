@@ -1,0 +1,6 @@
+<%= form_for(game, {:url => "/games"}) do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %>
+  <br/>
+  <%= f.submit %>
+<% end %>
