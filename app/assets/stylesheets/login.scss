@@ -1,9 +1,6 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import 'welcomes';
-@import "devise";
-@import "user";
-
+.container {
+	background-color: red;
+}
 
 footer {
 	color: red;
@@ -21,6 +18,4 @@ footer {
 #container h2 {
 	margin: 0px auto;
 }
-
-@import 'games';
 

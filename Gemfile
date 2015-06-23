@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'd3_rails'
 gem 'devise'
+
+gem "paperclip", "~> 4.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -15,6 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'bootstrap-sass'
+
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

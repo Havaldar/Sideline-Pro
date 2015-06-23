@@ -1,5 +1,7 @@
+
 <div id="container">
   <h2>Log in</h2>
+
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
@@ -18,7 +20,6 @@
         <%= f.label :remember_me %>
       </div>
     <% end -%>
-
     <div class="actions">
       <%= f.submit "Log in" %>
     </div>
@@ -26,4 +27,5 @@
   Not a Member?
 <%= render "devise/shared/links" %>
 </div>
+
 
