@@ -1,0 +1,30 @@
+h1, h2 {
+  text-align: center;
+}
+
+#football_field{
+  	margin: 0 auto;
+  	border: black solid 1px;
+ 	background-image:url('soccer_field.png');
+ 	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#football_field td{
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+}
+
+td.alive {
+  background-color: #000;
+}
+
+td.dead {
+  background-color: #3BAC38;
+}
+
+#control_panel {
+  margin: 10px auto;
+  text-align: center;
+}
