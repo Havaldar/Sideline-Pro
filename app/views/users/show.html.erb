@@ -3,9 +3,10 @@
 <div class="userp-container">
 	<div class = "col-xs-3 col-centered"> 
 		<div class ="verticalLine">
-			<%=@user.name.upcase%>
-			</div>
+			<%=@user.name.upcase%><br/>
+			<%= link_to 'Edit Profile', edit_user_registration_path %>
 		</div>
+
 		
 		<div = "user-stats">
 		
@@ -13,5 +14,13 @@
 	</div>
 </div>
 
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Create A New Team
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    <%= render :partial => '/layouts/team_form', :locals => {:team => @team} %>
+  </div>
+</div>
 
 
