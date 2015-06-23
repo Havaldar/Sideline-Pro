@@ -30,3 +30,33 @@ td.dead {
   margin: 10px auto;
   text-align: center;
 }
+
+.player_image {
+	width: 30px;
+	height: 30px;
+	border-radius: 100px;
+	z-index: 1000000;
+}
+#team1_players {
+ 	float: right;
+ 	width: 100px;
+}
+#team2_players {
+ 	float: left;
+ 	width: 100px;
+}
+.game_page_containers {
+	diplay:inline-block;
+
+}
+#field_container {
+	margin: 0 auto;
+}
+.roster td{
+	padding: 10px;
+	border-bottom: black solid 1px;
+}
+.roster th{
+	padding: 10px;
+	border-bottom: black solid 1px;
+}
