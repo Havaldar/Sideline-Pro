@@ -1,17 +1,93 @@
-.userp-container {
-	padding-left: 30px;
-	font-size: 30px;
-	font-family: 'Slabo 27px', serif;
-	text-align: top;
+#wrapper {
+  padding-left: 350px;
+  transition: all 0.4s ease 0s;
 }
 
-.verticalLine {
-    border-right: thick solid #262730;
-    line-height: 450px;
-    margin-top: auto;
-    margin-bottom: auto;
+#sidebar-wrapper {
+  margin-top: -10px;
+  margin-left: -350px;
+  left: 350px;
+  width: 350px;
+  background: white;
+  position: absolute;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+  border-right: 2px solid #eee;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 350px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Slabo 27px', serif;
+  font-size: 30px;
+
 }
 
 img {
-	border-radius: 200px;
+  border-radius: 200px;
+  border: 1px solid #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+}
+
+.username {
+  font-size: 50px;
+  text-align: center;
+}
+
+.userinfo {
+  position: relative;
+  margin-top: 230px;
+  padding-left: 10px;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+}
+
+button.btn.btn-primary {
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+.container {
+	width: 100%;
+}
+
+#teams {
+  font-size: 30px;
 }

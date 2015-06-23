@@ -3,3 +3,7 @@
 <div id="football_field"></div>
 
 <%=@game.name%>
+
+<% @game.team2.users.each do |user|%>
+	<%=image_tag user.avatar.url(:thumb)%>
+<%end%>
