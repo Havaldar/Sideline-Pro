@@ -46,10 +46,10 @@ var game = {
 	    this.forEachCell(clearCell);
 	},
 	setupBoardEvents: function() {
-    var onBoardClick = function (event) {
-      var cell = event.toElement;
-      this.toggleCell(cell);
-    };
-    $('#football_field').dblclick(onBoardClick.bind(this));
-  },
+    	var onBoardDblClick = function (event) {
+      		var cell = event.toElement;
+      		this.toggleCell(cell);
+    	};
+    	$('#football_field').dblclick(onBoardDblClick.bind(this));
+  	},
 };
