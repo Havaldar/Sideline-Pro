@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'd3_rails'
 gem 'devise'
-
+gem 'jquery-ui-rails'
 gem "paperclip", "~> 4.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
