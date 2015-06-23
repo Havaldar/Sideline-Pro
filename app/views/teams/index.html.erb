@@ -1,5 +1,4 @@
-<h1>Team Index Page</h1>
-<%= render :partial => 'team_form', :locals => {:team => @team} %>
+<h1>Teams</h1>
 <ul>
 <%@teams.each do |team|%>
 	<li><%= link_to team.name, team %></li>

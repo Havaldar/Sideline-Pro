@@ -8,10 +8,10 @@ class User < ActiveRecord::Base
 		:through => :memberships
 
 
-has_attached_file :avatar, :styles => { :medium => "300x300", :thumb => "100x100"},
-:default_url => "?images?:style/missing.png"
+has_attached_file :avatar, :styles => { :medium => "300x300#", :thumb => "200x200#"},
+:default_url => "missing.png"
 validates_attachment_content_type :avatar, :content_type =>
-/\Aimage\?.*\Z/
+/\Aimage\/.*\Z/
 
 
 	validates :name, presence: true, uniqueness: true
