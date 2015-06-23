@@ -1,7 +1,21 @@
-<h1>Teams</h1>
-<ul>
-<%@teams.each do |team|%>
-	<li><%= link_to team.name, team %></li>
-<%end%>
-</ul>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+<header class="team-index-header">
+	<h1 class="team-index-header-team">Teams</h1>
+	</header>
+	
+	
+<div class="row">
+	<ul>
+	<%@teams.each do |team|%>
+	<div class="col-sm-4 team-name">
+		<div class="well">
+
+		<p><%= link_to team.name, team %></p>
+		</div>
+		</div>
+	<%end%>
+	</div>
+
+	</ul>
+</div>
 
