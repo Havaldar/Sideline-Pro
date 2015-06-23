@@ -3,46 +3,45 @@
 <div id="wrapper">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet mauris ac mauris ullamcorper sagittis vitae vitae quam. Aliquam rhoncus odio sit amet massa condimentum dictum. Etiam sem purus, scelerisque id felis quis, vulputate tempus diam. Nunc tempus, metus quis mollis posuere, justo elit fermentum velit, sit amet dapibus magna nibh et mi. Phasellus a lobortis nibh. Mauris finibus felis sed sapien sollicitudin, sed blandit mauris feugiat. Aenean suscipit placerat mattis. Fusce justo dui, egestas vel facilisis in, consectetur vel quam. Curabitur eget maximus est. Praesent ac ipsum ultrices, hendrerit orci sit amet, blandit libero. Phasellus rutrum, tortor quis dictum ultrices, tellus leo dignissim turpis, eget mattis sapien metus vitae ex. Nam consectetur sapien eget justo varius cursus. Sed sagittis, ante ut condimentum suscipit, sapien justo volutpat lorem, ultricies viverra purus mi eu orci. Integer semper metus at efficitur mattis</li>
-            <li>Vestibulum consequat eros lorem, eget suscipit ex mollis vel. Nulla vestibulum, tortor eu venenatis imperdiet, ipsum nisi blandit nulla, nec ornare diam velit ut augue. Morbi nec ligula aliquam, posuere sapien iaculis, tincidunt augue. Donec semper sapien vitae vestibulum hendrerit. Duis tempor felis a egestas commodo. Curabitur sagittis mauris ut neque accumsan, vitae ultrices dui tempus. Donec ut magna eget dolor rhoncus varius.</li>
-            <li>Aliquam fermentum ligula sed sem fringilla ornare. Mauris eu fringilla ligula. Nam fringilla lacus eu lorem lobortis, euismod aliquam tellus hendrerit. Vestibulum eget faucibus enim, eu feugiat lacus. Mauris consequat, dolor ac varius feugiat, odio mauris aliquam metus, id faucibus est turpis ut mi. Vivamus dignissim accumsan convallis. Pellentesque eget metus vel metus eleifend congue eu eu mauris. Mauris congue finibus velit, ut posuere lacus porta at. Integer vel condimentum dui. Ut convallis, lorem eget molestie commodo, tellus odio facilisis metus, vel euismod risus mi a nisl. Etiam fringilla cursus dui non porttitor. Sed mauris dui, commodo id placerat non, aliquet a est. Suspendisse commodo velit id hendrerit viverra. Ut lacinia dapibus consequat. Nunc gravida quis nulla et ornare. Vestibulum volutpat odio vel magna suscipit, a tincidunt elit dictum.</li>
+        	<div class="username">
+        		<%=@user.name%>
+        	</div>	
+            <%= image_tag @user.avatar.url(:medium) %>
+			<div class="userinfo">
+				<%= link_to 'Edit Profile', edit_user_registration_path %>
+			</div>
         </ul>
+    </div>
+    <div class ="verticalLine">
     </div>
     <div id="page-content-wrapper">
         <div class="page-content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- content of page -->
+                       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  						Create A New Team
+						</button>
+						<div class="collapse" id="collapseExample">
+						  <div class="well">
+						    <%= render :partial => '/layouts/team_form', :locals => {:team => @team} %>
+						  </div>
+						</div>
+						<%@user_teams.each do |team|%>
+							<div class="well" id="teams">
+							<%= link_to team.name, team %>
+							</div>
+						<%end%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <div class="userp-container">
-	<div class = "col-xs-3 col-centered"> 
-		<div class ="verticalLine">
-			<%= image_tag @user.avatar.url(:medium) %>
-			<%=@user.name%><br/>
-			<%= link_to 'Edit Profile', edit_user_registration_path %>
-		</div>
-
-		
-		<div = "user-stats">
-		
-		</div>
-	</div>
-</div>
-
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Create A New Team
-</button>
 <div class="collapse" id="collapseExample">
   <div class="well">
     <%= render :partial => '/layouts/team_form', :locals => {:team => @team} %>
   </div>
-</div> -->
+</div>
 
 

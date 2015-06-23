@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@team = Team.new
+		@user_teams = @user.teams
 	end
 
 	def index
