@@ -17,8 +17,8 @@ $(document).ready(function(){
 			$('.event_button').click(function(event){
 				var data = {
 					player_id: parseInt(player.id),
-					game_id: parseInt(event.target.value),
-					stat_options: parseInt(event.target.name)
+					game_id: parseInt(event.target.name),
+					stat_options: parseInt(event.target.value)
 				}
 				$.ajax({
 					type: "POST",

@@ -7,7 +7,7 @@ class GamesController < ApplicationController
 		if @game.save
 			@game.team1.users.each do |player|
 				Statistic.create({
-					game_id: @game_id, 
+					game_id: @game.id, 
 					user_id: player.id, 
 					goals: 0,
 	    			assists: 0,
@@ -21,7 +21,7 @@ class GamesController < ApplicationController
 			end
     			@game.team2.users.each do |player|
 				Statistic.create({
-					game_id: @game_id, 
+					game_id: @game.id, 
 					user_id: player.id, 
 					goals: 0,
 	    			assists: 0,
