@@ -1,13 +1,17 @@
 <div class=>
-	<div class="container teams">
-		<h1><%=@team.name%></h1>
-		<%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
+	<div class="container team-page">
+		<h1>
+		<p class="well team_show pull-left"><%=link_to 'Join the team', memberships_path(:team_id => @team.id), method: :post%></p>
+		<%=@team.name%></h1>
+		<div class="team_image">
+			<%= image_tag @team.avatar.url(:largecover) %>
+		</div>
 		<ul>
-		<%@team.users.each do |user|%>
-		<%= image_tag @team.avatar.url(:medium) %>
+		<br><%@team.users.each do |user|%>
 		</div>
 		</div>
-	<li><%= link_to user.name, user_path(user)%></li>
+		<h3 class="roster_names">Roster</h3>
+	<li class="roster_links"><%= link_to user.name, user_path(user)%></li>
 <%end%>
-<%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %>
+<br><p class="game_form"><%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %>
 </ul>
