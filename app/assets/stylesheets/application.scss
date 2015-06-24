@@ -5,15 +5,12 @@
 @import "user";
 @import 'games';
 @import "team";
-<<<<<<< HEAD
+@import "teamindex";
+
 /*
  *= require jquery-ui
  */
- 
-=======
-@import "teamindex";
 
->>>>>>> 3971217d3cf49f3922c626fec338a34e9c22efe4
 #container {
 	background-color: #eee;
 	width: 300px;
