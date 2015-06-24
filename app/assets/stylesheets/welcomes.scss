@@ -1,4 +1,4 @@
-.jumbotron {
+.jumbotron.main {
 	background-image:url('soccer_player.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -6,7 +6,7 @@
 	height: 650px;
 }
 
-.jumbotron .container {
+.container.main {
 	position: relative;
 	top: 10px;
 	margin-left: 150px;
