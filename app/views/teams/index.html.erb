@@ -8,15 +8,16 @@
 
 
 <div class="row" id="teamrow">
-	<ul>
 	<%@teams.each do |team|%>
-		<div class="col-sm-4 team-name">
-			<div class="well team_index">
-				<p class="link_to_teams"><%= link_to team.name, team %></p>
+		<div class="col-sm-5 col-md-3 team-name">
+			<div class="team_index hvr-grow">
 				<%= image_tag team.avatar(:medium), :class => "teamindexpic" %>
+				<div class="caption">
+					<p class="link_to_teams"><%= link_to team.name, team %></p>
+					<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+				</div>	
 			</div>
 		</div>
 	<%end%>
-	</ul>
 </div>
 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations'}
   post 'statistics' => 'statistics#update'
-  resources :teams, only: [:index, :show, :new, :create, :update]
+  resources :teams, only: [:index, :show, :new, :create, :edit]
   resources :users, only: [:index, :show, :edit]
   resources :games, only: [:show, :new, :create, :update]
   post 'teams/:id' => 'memberships#create', as: 'memberships'

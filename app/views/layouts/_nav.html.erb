@@ -2,13 +2,13 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navtabs">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <div class="navbar-brand hvr-underline-reveal" id="logo"><%= link_to 'LOCKER ROOM', "/users/#{current_user.id}" %></div>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,10 +22,10 @@
 				<% end %>
 				</li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">	
-                <li role="presentation" class="hvr-fade"><%= link_to 'Profile', "/users/#{current_user.id}"%></li>
-				<li role="presentation" class="hvr-fade"><%= link_to 'Teams', teams_path%></li>			
-				<li role="presentation" class="hvr-fade"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+			<ul class="nav navbar-nav navbar-right" id="leftnavtabs">	
+                <li role="presentation" class="hvr-fade"><%= link_to 'PROFILE', "/users/#{current_user.id}"%></li>
+				<li role="presentation" class="hvr-fade"><%= link_to 'TEAMS', teams_path%></li>			
+				<li role="presentation" class="hvr-fade"><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
