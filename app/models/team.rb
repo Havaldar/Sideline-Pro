@@ -7,7 +7,7 @@ class Team < ActiveRecord::Base
 :default_url => "missing_team.png"
 validates_attachment_content_type :avatar, :content_type =>
 /\Aimage\/.*\Z/
-
+	validates :name, presence: true, uniqueness: true
 	def self.filter(query)
 		query.blank? ? Team.all : Team.where("lower(name) LIKE '%#{query.downcase}%'")
 	end

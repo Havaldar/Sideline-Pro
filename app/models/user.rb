@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 	has_many :memberships
 	has_many :teams, 
 		:through => :memberships
-
+		
 
 has_attached_file :avatar, :styles => { :large => "300x300#", :medium => "200x200#", :thumb => "20x20#"},
 :default_url => "missing.png"
