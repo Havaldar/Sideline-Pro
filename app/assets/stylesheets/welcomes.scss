@@ -15,7 +15,7 @@
 
 .jumbotron h1 {
 	color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'PT Serif', serif;
 	text-align: left;
 }
 
@@ -57,4 +57,65 @@ h1 {
 
 #user_password {
 	width: 300px;
+}
+
+.jumbotron.welcome_page_second{
+	margin-top: -30px;
+	height: 300px;
+	background-color: #FFFFFF;
+
+}
+.jumbotron.welcome_page_second h1{
+	text-align: center;
+	color: black;
+	font-size: 30px;
+	
+}
+.jumbotron.welcome_page_second p{
+	color: #555B6E;
+	text-align: center;
+}
+
+.jumbotron.welcome_page_third {
+	margin-top: -35px;
+	background-image:url('welcomepagesecond.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 550px;
+}
+
+.page_third_header {
+	width: 800px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #555B6E;
+	opacity: 0.8;
+    filter: alpha(opacity=40);
+    border-radius: 5px;
+    font-family: 'Abel', sans-serif;
+}
+.page_third_header h1 {
+	text-align: center;
+	font-size: 45px;
+	color: white;
+	line-height: 120px;
+	
+
+}
+.page_third_header p {
+	text-align: center;
+	color: white;
+	
+}
+.welcome_page_footer {
+	margin-top: -30px;
+	background-color: #89B0AE;
+
+}
+.welcome_page_footer h3 {
+	text-align: center;
+	color: white;
+	font-family: 'Abel', sans-serif;
 }
