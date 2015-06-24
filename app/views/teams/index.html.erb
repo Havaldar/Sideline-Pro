@@ -7,12 +7,13 @@
 
 
 
-<div class="row">
+<div class="row" id="teamrow">
 	<ul>
 	<%@teams.each do |team|%>
 		<div class="col-sm-4 team-name">
 			<div class="well team_index">
 				<p class="link_to_teams"><%= link_to team.name, team %></p>
+				<%= image_tag team.avatar(:medium), :class => "teamindexpic" %>
 			</div>
 		</div>
 	<%end%>

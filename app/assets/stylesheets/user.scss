@@ -1,4 +1,6 @@
+
 #wrapper {
+  padding-top: 80px;
   padding-left: 350px;
   transition: all 0.4s ease 0s;
 }
@@ -39,9 +41,9 @@ img.userpic {
   border-radius: 200px;
   border: 1px solid #eee;
   position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
 
@@ -106,4 +108,13 @@ button.btn.btn-primary {
 
 #usertabs {
   color: red;
+}
+
+.editform {
+  text-align: center;
+}
+
+.teamindexpic {
+  width: 200px;
+  height: 200px;
 }

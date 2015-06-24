@@ -6,9 +6,10 @@
 @import 'welcomes';
 @import "devise";
 @import "user";
-@import 'games';
+@import "games";
 @import "team";
 @import "teamindex";
+@import "hover";
 
 #container {
 	background-color: #eee;
@@ -23,5 +24,13 @@
 	margin: 0px auto;
 }
 
+#navbar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    background-color: #8B8C89;
+}
 
 

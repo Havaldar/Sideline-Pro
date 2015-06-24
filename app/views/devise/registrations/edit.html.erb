@@ -2,14 +2,14 @@
 
 <%= form_for(resource, {as: resource_name, url: registration_path(resource_name), html: { multipart: true, method: :put }}) do |f| %>
   <%= devise_error_messages! %>
-
+<div class="editform">
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :avatar %><br />
+    <%= f.label :Profile_Picture %><br />
     <%= f.file_field :avatar %>
   </div>
 
@@ -43,3 +43,4 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
