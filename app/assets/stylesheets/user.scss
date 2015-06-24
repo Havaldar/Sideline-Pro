@@ -106,8 +106,12 @@ button.btn.btn-primary {
   padding: 10px;
 }
 
-#usertabs {
-  color: red;
+.ui-widget-header {
+  background: none;
+}
+
+.ui-widget-content {
+  border: 0;
 }
 
 .editform {
