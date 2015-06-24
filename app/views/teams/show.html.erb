@@ -1,7 +1,8 @@
 <div class=>
-	<div class="container teams">
-		<h1><%=@team.name%></h1>
-		<%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
+	<div class="container team-page">
+		<h1>
+		<p class="well pull-left team_show"><%=link_to 'Join the team', memberships_path(:team_id => @team.id), method: :post%></p>
+		<%=@team.name%></h1>
 		<ul>
 		<%@team.users.each do |user|%>
 		<%= image_tag @team.avatar.url(:medium) %>
