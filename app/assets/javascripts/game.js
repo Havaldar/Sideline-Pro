@@ -15,21 +15,20 @@ $(document).ready(function(){
 		var player = event.target
 		$('#modal_form').modal('show');
 			$('.event_button').click(function(event){
-				console.log(player.id);
-				console.log(event.target.value);
-				console.log(event.target.name);
-				// $.post("statistics", function(data) {
+				var data = {
+					player_id: parseInt(player.id),
+					game_id: parseInt(event.target.value),
+					stat_options: parseInt(event.target.name)
+				}
+				$.ajax({
+					type: "POST",
+					url: "/statistics",
+					data: data,
+					success: function() {
 
-				// });
-				// $.ajax({
-				// 	type: "POST",
-				// 	url: "statistics",
-				// 	data: data,
-				// 	success: function() {
-
-				// 	},
-				// 	dataType: 
-				// })
+					},
+					dataType: "html"
+				})
 			$('#modal_form').modal('hide');
 		});
 	});
