@@ -1,0 +1,11 @@
+<div class="team_edit_form">
+<%= form_for(@team, {:url => edit_team_path}) do |f| %>
+	<%= f.label :name%>:
+	<%= f.text_field :name%>
+	<br/>
+    <%= f.label :Profile_Picture %>
+    <%= f.file_field :avatar %>
+    <br/>
+	<%= f.submit %>
+<% end %>
+</div>

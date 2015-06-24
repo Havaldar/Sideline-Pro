@@ -1,27 +1,37 @@
 class StatisticsController < ApplicationController
 	def update
-		stat = Statistic.where({user_id: params[:player_id], game_id: params[:game_id]}).first
-		case params[:stat_option]
-		when 1
-			stat.goals += 1
-		when 2
-			stat.assists += 1
-		when 3
-			stat.fouls += 1
-		when 4
-			stat.yellow_cards += 1
-		when 5
-			stat.red_cards += 1
-		when 6
-			stat.shots += 1
-		when 7
-			stat.shots_on_target += 1
-		when 8 
-			stat.offsides += 1
+		t = Statistic.where({user_id: params[:player_id], game_id: params[:game_id]}).first
+		response = ""
+		case params[:stat_options]
+		when "1"
+			t.goals += 1
+			response = "#{User.find(user_id: params[:player_id]).name} scored a goal!"
+		when "2"
+			t.assists += 1
+			response = "#{User.find(user_id: params[:player_id]).name} made an assist."
+		when "3"
+			t.fouls += 1
+			response = "#{User.find(user_id: params[:player_id]).name} fouled a player."
+		when "4"
+			t.yellow_cards += 1
+			response = "#{User.find(user_id: params[:player_id]).name} recieved a yellow card."
+		when "5"
+			t.red_cards += 1
+			response = "#{User.find(user_id: params[:player_id]).name} recieved a red card."
+		when "6"
+			t.shots += 1
+			response = "#{User.find(user_id: params[:player_id]).name}  just shot."
+		when "7"
+			t.shots_on_target += 1
+			response = "#{User.find(user_id: params[:player_id]).name} just shot at goal."
+		when "8" 
+			t.offsides += 1
+			response = "#{User.find(user_id: params[:player_id]).name} was caught offside."
 		else
 		end
-		stat.save
 
-		render :show
+		t.save!
+
+		render nothing: true
 	end
 end
