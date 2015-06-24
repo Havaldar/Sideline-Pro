@@ -1,3 +1,6 @@
+/*
+ *= require jquery-ui
+ */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'welcomes';
@@ -6,10 +9,6 @@
 @import 'games';
 @import "team";
 @import "teamindex";
-
-/*
- *= require jquery-ui
- */
 
 #container {
 	background-color: #eee;

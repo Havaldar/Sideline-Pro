@@ -5,7 +5,7 @@
 <tr><th colspan="2"><%=@game.team1.name%></th></tr>
 <%@game.team1.users.each do |user|%>
 	<tr>
-		<td><img src=<%=user.avatar.url(:thumb)%> id=<%="player_id_#{user.id}"%> class="player_image team1_player" title=<%=user.name%>></td> 
+		<td><img src=<%=user.avatar.url(:thumb)%> id=<%="#{user.id}"%> class="player_image team1_player" title=<%=user.name%>></td> 
 		<td><%=user.name%></td>
 	</tr>
 <%end%>
@@ -19,9 +19,35 @@
 <tr><th colspan="2">><%=@game.team2.name%></th></tr>
 <% @game.team2.users.each do |user|%>
 	<tr>
-		<td><img src=<%=user.avatar.url(:thumb)%> id=<%="player_id_#{user.id}"%> class="player_image team2_player" title=<%=user.name%>></td> 
+		<td><img src=<%=user.avatar.url(:thumb)%> id=<%="#{user.id}"%> class="player_image team2_player" title=<%=user.name%>></td> 
 		<td><%=user.name%></td>
 	</tr>
 <%end%>
 </table>
+</div>
+
+<div class="modal fade" id="modal_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" id="statsbox">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Event Marker</h4>
+      </div>
+      <div class="modal-body">
+        <div class="btn-group" role="group">
+		  <button type="button" class="btn btn-default event_button" value="1" name=<%=@game.id%>>Goal</button>
+		  <button type="button" class="btn btn-default event_button" value="2" name=<%=@game.id%>>Assist</button>
+		  <button type="button" class="btn btn-default event_button" value="3" name=<%=@game.id%>>Foul</button>
+		  <button type="button" class="btn btn-default event_button" value="4" name=<%=@game.id%>>Yellow Card</button>
+		  <button type="button" class="btn btn-default event_button" value="5" name=<%=@game.id%>>Red Card</button>
+		  <button type="button" class="btn btn-default event_button" value="6" name=<%=@game.id%>>Shot</button>
+		  <button type="button" class="btn btn-default event_button" value="7" name=<%=@game.id%>>Shot on Goal</button>
+		  <button type="button" class="btn btn-default event_button" value="8" name=<%=@game.id%>>Offside</button>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

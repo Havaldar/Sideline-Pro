@@ -53,7 +53,8 @@ img.userpic {
 .userinfo {
   position: relative;
   margin-top: 230px;
-  padding-left: 10px;
+  padding-left: 15px;
+  font-size: 20px;
 }
 
 @media (max-width:767px) {
@@ -91,4 +92,15 @@ button.btn.btn-primary {
 #teams {
   font-size: 30px;
   background: white;
+}
+#sidebar-wrapper img {
+  height: 200px;
+  width:200x;
+  border-radius: 200px;
+  border: 1px solid #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
 }
