@@ -1,22 +1,35 @@
-.team-page h1 {
-	border-bottom:1px solid;
+.team_name {
+	color: white;
+	font-size: 45px;
 }
 .well.team_show {
-	font-size: 10px;
-	color: white;
+	line-height: 5px;
 	text-align: center;
-	vertical-align: middle;
+	position: absolute;
+	left: auto;
+	right: auto;
 	background-color: #00A6ED;
-	height: 25px;
-	width: 90px;
+	height: 12px;
+	width: 150px;
+	border: none;
+
+}
+.well.team_show a {
+	line-height: 5px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+	padding-bottom: 13px;
+
 }
 
-.team_image {
-	width: 100%;
+.jumbotron.team_image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
 }
 
 .roster_names {
-	margin-top: 400px;
 	text-align: center;
 }
 
