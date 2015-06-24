@@ -1,17 +1,30 @@
-<div class=>
+<div>
 	<div class="container team-page">
-		<h1>
-		<p class="well team_show pull-left"><%=link_to 'Join the team', memberships_path(:team_id => @team.id), method: :post%></p>
-		<%=@team.name%></h1>
-		<div class="team_image">
-			<%= image_tag @team.avatar.url(:largecover) %>
+		<div class="jumbotron team_image">
+			<header>
+				<h1 class="team_name"><%=@team.name.upcase%></h1>
+			</header>
+			<div class="well team_show pull-right"><%=link_to 'Join', memberships_path(:team_id => @team.id), method: :post%>
+			</div>
 		</div>
+			
+	</div>
+	<div class="col-sm-6 roster_names">
+		<h3>Roster</h3>
 		<ul>
-		<br><%@team.users.each do |user|%>
-		</div>
-		</div>
-		<h3 class="roster_names">Roster</h3>
-	<li class="roster_links"><%= link_to user.name, user_path(user)%></li>
-<%end%>
-<br><p class="game_form"><%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %>
-</ul>
+		<% @team.users.each do |user|%>
+			
+			<li class="roster_links"><%= link_to user.name, user_path(user)%></li>
+		<%end%>
+		</ul>
+	</div>
+	<div class="col-sm-6 game_form">
+		<p><h3>Challenge</h3><%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %></p>
+	</div>
+</div>
+
+ <style type="text/css">
+	.jumbotron.team_image {
+		background-image: url(<%=@team.avatar.url(:largecover)%>)
+	}
+ </style>

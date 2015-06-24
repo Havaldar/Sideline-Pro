@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations'}
- 
+  post 'statistics' => 'statistics#update'
   resources :teams, only: [:index, :show, :new, :create]
   resources :users, only: [:index, :show, :edit]
   resources :games, only: [:show, :new, :create, :update]

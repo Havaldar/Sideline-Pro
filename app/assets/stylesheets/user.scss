@@ -81,7 +81,6 @@ img.userpic {
 }
 
 button.btn.btn-primary {
-  margin-top: -5px;
   margin-bottom: 15px;
 }
 
@@ -92,4 +91,19 @@ button.btn.btn-primary {
 #teams {
   font-size: 30px;
   background: white;
+}
+#sidebar-wrapper img {
+  height: 200px;
+  width:200x;
+  border-radius: 200px;
+  border: 1px solid #eee;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+}
+
+#usertabs {
+  color: red;
 }

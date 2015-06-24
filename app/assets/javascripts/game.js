@@ -1,18 +1,38 @@
 $(document).ready(function(){
-	game.createAndShowField();
+	game.createAndShowField(); 
 	$('.field_position').droppable({
 		accept: '.player_image'
-
 	});
 	$('.player_image').draggable({
 		snap: ".field_position", 
-		revert: 'invalid', 
-		cursor: 'move'
+		snap: ".roster td",
+		revert: 'invalid'
 	});
-	$('.player_image').dblclick(function() {
+	$('.roster td').droppable({
+		accept: '.player_image'
+	});
+	$('.player_image').dblclick(function(event) {
+		var player = event.target
+		$('#modal_form').modal('show');
+			$('.event_button').click(function(event){
+				var data = {
+					player_id: parseInt(player.id),
+					game_id: parseInt(event.target.value),
+					stat_options: parseInt(event.target.name)
+				}
+				$.ajax({
+					type: "POST",
+					url: "/statistics",
+					data: data,
+					success: function() {
 
+					},
+					dataType: "html"
+				})
+			$('#modal_form').modal('hide');
+		});
 	});
-	
+	$('.player_image').tooltip();
 });
 
 var game = {
