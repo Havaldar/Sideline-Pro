@@ -15,7 +15,7 @@
 </div>
 <div class="col-md-2">
 <table id="team2_players" class="roster">
-<tr><th colspan="2">><%=@game.team2.name%></th></tr>
+<tr><th colspan="2"><%=@game.team2.name%></th></tr>
 <% @game.team2.users.each do |user|%>
 	<tr>
 		<td><img src=<%=user.avatar.url(:thumb)%> id=<%="#{user.id}"%> class="player_image team2_player" title=<%=user.name%>></td> 
