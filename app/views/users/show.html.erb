@@ -6,7 +6,7 @@
         	<div class="username">
         		<%=@user.name%>
         	</div>	
-            <%= image_tag @user.avatar.url(:medium) %>
+            <%= image_tag @user.avatar.url(:medium), :class => "userpic" %>
 			<div class="userinfo">
 				<%= link_to 'Edit Profile', edit_user_registration_path %>
 			</div>
@@ -28,7 +28,7 @@
 						  </div>
 						</div>
 						<%@user_teams.each do |team|%>
-							<div class="well" id="teams">
+							<div class="well id="teams">
 							<%= link_to team.name, team %>
 							</div>
 						<%end%>
