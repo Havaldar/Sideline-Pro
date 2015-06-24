@@ -1,21 +1,35 @@
+#teampagefull {
+	margin-top: 60px;
+}
+
 .team-index-header {
 	font-family: 'Slabo 27px', serif;
-	border-bottom: 1px solid #000000;
-
+	border-bottom: 1px solid #ccc;
+	padding-top: 40px;
 }
 
 
 .well.team_index {
-	border: 0.5px solid #000000;
+	border: 1px solid red;
 	margin-top: 20px;
-	margin-right: 10px;	
-	height: 200px;
-	width: 345px;
+	margin-right: auto;
+	margin-left: auto;	
 	background-color: white;
 	text-align: center;
 
 }
 
-.link_to_teams p {
-	border-bottom: 0.5px solid;
+#teamrow {
+	position: absolute;
+	width: 100%;
 }
+
+p.link_to_teams {
+	font-size: 15px;
+}
+
+.teamindexpic {
+  width: 200px;
+  height: 200px;
+}
+

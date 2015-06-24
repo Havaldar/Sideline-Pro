@@ -5,6 +5,10 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@team = Team.new
 		@user_teams = @user.teams
+		@user_games = []
+		@user.teams.each do |team|
+			@user_games << team.games
+		end
 	end
 
 	def index

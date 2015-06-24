@@ -25,6 +25,9 @@ class TeamsController < ApplicationController
 		end
 	end
 
+	def update
+	end
+
 	def team_params
   		params.require(:team).permit(:avatar)
 	end
