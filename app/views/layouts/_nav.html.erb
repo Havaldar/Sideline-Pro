@@ -1,11 +1,12 @@
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
-		<form class="navbar-form navbar-left" role="search">
-        	<div class="form-group">
-          		<input type="text" class="form-control" placeholder="Search">
-	  				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+		<%= form_tag "/teams", method: 'GET', id: 'teams_search', class: "navbar-form navbar-left", role: "search" do %>
+			<div class="form-group">
+				<%= text_field_tag 'q', params[:q], class: "form-control", placeholder: "Search Teams" %>
+				<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 			</div>
-      	</form>
+		<% end %>	
+		
 		<ul class="nav navbar-nav navbar-right">
 			<li role="presentation"><%= link_to 'Profile', "/users/#{current_user.id}"%></li>
 			<li role="presentation"><%= link_to 'Teams', teams_path%></li>			

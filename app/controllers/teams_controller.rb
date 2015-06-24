@@ -8,7 +8,7 @@ class TeamsController < ApplicationController
 	end
 
 	def index
-		@teams = Team.all
+		@teams = Team.filter(params[:q])
 		@team = Team.new
 	end
 
