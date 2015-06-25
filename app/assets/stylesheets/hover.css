@@ -1542,6 +1542,7 @@
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+
 }
 .hvr-sweep-to-bottom:before {
   content: "";
@@ -1551,7 +1552,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098d1;
+  background: #3A606E;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 0;

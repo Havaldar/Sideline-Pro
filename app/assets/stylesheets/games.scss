@@ -75,7 +75,10 @@ td.dead {
 	height: 300px;
 }
 #game_page_container {
-  #team_names {
-  	margin-top: -20px;
+
+  #game_name {
+  	h3 {
+  		margin-top: 0px
+  	}
   }
 }

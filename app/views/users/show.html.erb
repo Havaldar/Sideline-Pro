@@ -53,9 +53,11 @@
         						  </div>
         						</div>
         						<%@user.teams.each do |team|%>
-        							<div class="well" id="teams">
-        							<%= link_to team.name, team %>
+                                    <a href=<%=team_path(team)%>>
+        							<div class="well hvr-sweep-to-bottom" id="teams">
+        							     <%=team.name%>
         							</div>
+                                    </a>
         						<%end%>
                             </div>
                         </div>
@@ -64,9 +66,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <%@games.each do |game|%>
-                                    <div class="well" id="teams">
-                                    <%= link_to game.name, game %>
+                                    <a href=<%=game_path(game)%>>
+                                    <div class="well hvr-sweep-to-bottom" id="teams">
+                                        <%=game.name%>
                                     </div>
+                                    </a>
                                 <%end%>
                             </div>
                         </div>    
