@@ -92,6 +92,8 @@ img.userpic {
 
 button.btn.btn-primary {
   margin-bottom: 15px;
+  background-color: #282E42;
+  border-color: #282E42;
 }
 
 .container {
@@ -106,6 +108,7 @@ button.btn.btn-primary {
   a {
   text-decoration: none;
 }
+
 }
 #sidebar-wrapper img {
   height: 200px;
@@ -134,19 +137,19 @@ button.btn.btn-primary {
 }
 
 .user_stats_table {
-  margin-left: 45px;
+  margin-left: 30px;
   margin-top: 10px;
 
 }
 
 .user_stats_table td {
-  border-bottom: 1px solid #1C6623;
+  border-bottom: 1px solid #518252;
 }
 
 .table_data {
-  background-color: #1C6623;
+  background-color: #518252;
   color: white;
-  padding: 5px;
+  padding: 10px;
 
 }
 
@@ -157,13 +160,13 @@ button.btn.btn-primary {
 
 .stats_index_1 {
   margin-left: 0px;
-  background-color: #1C6623;
+  background-color: #518252;
   padding-left: 70px;
   color: white;
 }
 
 .white_stats_index {
-  padding: 5px;
+  padding: 10px;
 }
 
 .sidebar_footer {
