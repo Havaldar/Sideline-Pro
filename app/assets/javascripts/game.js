@@ -14,23 +14,27 @@ $(document).ready(function(){
 	$('.player_image').dblclick(function(event) {
 		var player = event.target
 		$('#modal_form').modal('show');
-			$('.event_button').click(function(event){
-				var data = {
-					player_id: parseInt(player.id),
-					game_id: parseInt(event.target.name),
-					stat_options: parseInt(event.target.value)
-				}
-				$.ajax({
-					type: "POST",
-					url: "/statistics",
-					data: data,
-					success: function() {
-
-					},
-					dataType: "html"
-				})
+		$('.event_button').click(function(event){
+			var data = {
+				player_id: parseInt(player.id),
+				game_id: parseInt(event.target.name),
+				stat_options: parseInt(event.target.value)
+			};
+			console.log(parseInt(player.id));
+			console.log(parseInt(event.target.name));
+			console.log(parseInt(event.target.value));
+			$.ajax({
+				type: "POST",
+				url: "/statistics",
+				data: data,
+				success: function(response) {
+					$("#notifications").append(response);
+				},
+				dataType: "html"
+			});
 			$('#modal_form').modal('hide');
 		});
+		$(".player_image").off("dblclick", ".player_image");
 	});
 	$('.player_image').tooltip();
 });

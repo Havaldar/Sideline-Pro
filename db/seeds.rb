@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Team.destroy_all
-
 Team.create name: "Baby Blue" 
 Team.create name: "Barcalona"
 Team.create name: "Real Madrid"
@@ -22,3 +21,5 @@ Team.create name: "Superman"
 Team.create name: "Fruit Loops"
 Team.create name: "Meow"
 
+User.destroy_all
+User.creat(name: "Kaan", )
