@@ -12,6 +12,17 @@
 			<div class="userinfo">
 				<%= link_to 'Edit Profile', edit_user_registration_path %>
 			</div>
+            <table>
+                <tr><td>Appearances</td><td><%=@user.statistics.length%></td></tr>
+                <tr><td>Goals</td><td><%=@user.goals%></td></tr>
+                <tr><td>Assists</td><td><%=@user.assists%></td></tr>
+                <tr><td>Fouls</td><td><%=@user.fouls%></td></tr>
+                <tr><td>Yellow Cards</td><td><%=@user.yellow_cards%></td></tr>
+                <tr><td>Red Cards</td><td><%=@user.red_cards%></td></tr>
+                <tr><td>Offsides</td><td><%=@user.offsides%></td></tr>
+                <tr><td>Shots</td><td><%=@user.shots%></td></tr>
+                <tr><td>Shots on Goal</td><td><%=@user.shots_on_target%></td></tr>
+            </table>
         </ul>
     </div>
     <div class ="verticalLine">
@@ -36,7 +47,7 @@
         						    <%= render :partial => '/layouts/team_form', :locals => {:team => @team} %>
         						  </div>
         						</div>
-        						<%@user_teams.each do |team|%>
+        						<%@user.teams.each do |team|%>
         							<div class="well" id="teams">
         							<%= link_to team.name, team %>
         							</div>
@@ -47,7 +58,15 @@
                     <div id="tab-2">
                         <div class="row">
                             <div class="col-md-12">
+<<<<<<< HEAD
                             
+=======
+                                <%@games.each do |game|%>
+                                    <div class="well" id="teams">
+                                    <%= link_to game.name, game %>
+                                    </div>
+                                <%end%>
+>>>>>>> bc2a95eb7f202aec9c3f8bcc073c426cddeaa9a6
                             </div>
                         </div>    
                     </div>
