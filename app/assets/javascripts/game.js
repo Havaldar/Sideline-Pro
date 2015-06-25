@@ -22,15 +22,13 @@ $(document).ready(function(){
 				game_id: parseInt(event.target.name),
 				stat_options: parseInt(event.target.value)
 			};
-			console.log(parseInt(player.id));
-			console.log(parseInt(event.target.name));
-			console.log(parseInt(event.target.value));
 			$.ajax({
 				type: "POST",
 				url: "/statistics",
 				data: data,
 				success: function(response) {
-					$("#notifications").append(response);
+					$("#notifications").prepend(response);
+					$("#notifications").animate( { height: "show" }, 2000, "easeOutBounce");
 				},
 				dataType: "html"
 			});
@@ -39,6 +37,7 @@ $(document).ready(function(){
 		});		
 	});
 	$('.player_image').tooltip();
+	$('.stat_box').fadeIn();
 });
 
 var game = {

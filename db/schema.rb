@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624203035) do
+ActiveRecord::Schema.define(version: 20150625093833) do
 
   create_table "games", force: :cascade do |t|
     t.string   "name"
@@ -75,14 +75,6 @@ ActiveRecord::Schema.define(version: 20150624203035) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "goals"
-    t.integer  "assists"
-    t.integer  "fouls"
-    t.integer  "offsides"
-    t.integer  "yellow_cards"
-    t.integer  "red_cards"
-    t.integer  "shots"
-    t.integer  "shots_on_target"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
