@@ -61,17 +61,10 @@
         						  </div>
         						</div>
         						<%@user.teams.each do |team|%>
-<<<<<<< HEAD
-                                    <a href=<%=team_path(team)%>>
-            							<div class="well hvr-sweep-to-bottom" id="teams">
-            							     <%=team.name%>
-            							</div>
-=======
                                     <a href=<%=team_path(team)%> id="teamtext">
         							<div class="well hvr-sweep-to-bottom" id="teams">
         							     <%=team.name%>
         							</div>
->>>>>>> 380184b8025f13b8bf325a3fed721dffcbdf653b
                                     </a>
         						<%end%>
                             </div>
