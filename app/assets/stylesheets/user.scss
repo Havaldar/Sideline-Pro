@@ -60,6 +60,7 @@ img.userpic {
 }
 
 .userinfo {
+  text-align: center;
   position: relative;
   margin-top: 230px;
   padding-left: 15px;
@@ -123,3 +124,50 @@ button.btn.btn-primary {
   margin-top: 15px;
 
 }
+
+.stat_box {
+  margin-bottom: 0px;
+}
+
+.user_stats_table {
+  margin-left: 45px;
+  margin-top: 10px;
+
+}
+
+.user_stats_table td {
+  border-bottom: 1px solid #1C6623;
+}
+
+.table_data {
+  background-color: #1C6623;
+  color: white;
+  padding: 5px;
+
+}
+
+.stats_index {
+  margin-left: 0px;
+  padding-left: 70px;
+}
+
+.stats_index_1 {
+  margin-left: 0px;
+  background-color: #1C6623;
+  padding-left: 70px;
+  color: white;
+}
+
+.white_stats_index {
+  padding: 5px;
+}
+
+.sidebar_footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+  width: 350px;
+  margin-top: 30px;
+  font-size: 10px
+
+}
+

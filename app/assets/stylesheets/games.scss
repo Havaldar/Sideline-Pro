@@ -15,11 +15,14 @@ h1, h2 {
   width: 20px;
   height: 20px;
 }
-
+.stat_box {
+	display: none;
+}
 #statsbox {
 	width: 620px;
 	height: auto;
 	margin: auto;
+
 }
 
 td.alive {
@@ -67,7 +70,12 @@ td.dead {
 	border-bottom: black solid 1px;
 }
 #notifications {
-	width: 60%;
+	width: 640px;
 	margin: 0 auto;
 	height: 300px;
+}
+#game_page_container {
+  #team_names {
+  	margin-top: -20px;
+  }
 }

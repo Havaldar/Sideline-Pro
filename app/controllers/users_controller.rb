@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 			@shots_on_target += statistic.shots_on_target
 			@offsides += statistic.offsides
 		end
+		
 		@games = @user.statistics.map do |s| 
 			s.game
 		end
