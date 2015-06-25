@@ -9,7 +9,9 @@
 
 <div class="row" id="teamrow">
 	<%@teams.each do |team|%>
+		
 		<div class="col-sm-5 col-md-3 team-name">
+			<a href=<%=team_path(team)%>>
 			<div class="team_index hvr-float">
 				<%= image_tag team.avatar(:medium), :class => "teamindexpic" %>
 				<div class="caption">
@@ -17,6 +19,7 @@
 					<p><a href="#" class="btn btn-primary" role="button" id="teamindexbutton">Join Team</a> <a href="#" class="btn btn-default" role="button">Challenge Team</a></p>
 				</div>	
 			</div>
+			</a>
 		</div>
 	<%end%>
 </div>

@@ -31,10 +31,15 @@
 .roster_names {
 	text-align: center;
 }
+.roster_names h3 {
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
 
 .roster_links {
 	margin-top: 20px;
 	text-align: left;
+	list-style-type: decimal-leading-zero;
 }
 
 .game_form {
@@ -44,6 +49,8 @@
 
 .game_form h3 {
 	text-align: center;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
 }
 
 .team_stats {

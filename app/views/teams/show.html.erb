@@ -21,10 +21,8 @@
 	<div class="col-sm-6 game_form">
 		<p><h3>Challenge</h3><%= render :partial => 'games/game_form', :locals => {:game => @game, :teams => @teams, :opponent_team => @team.id} %></p>
 	</div>
-</div>
-<div class="jumbotron team_stats">
-	<h2><%=@team.name.upcase  %> Stats
-</div>
+		
+	
  <style type="text/css">
 	.jumbotron.team_image {
 		background-image: url(<%=@team.avatar.url(:largecover)%>)

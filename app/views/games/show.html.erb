@@ -1,8 +1,9 @@
 <div id="game_page_container">
 <br/>
 <br/>
-<div id="team_names"><h1><%=@game.team1.name%> vs. <%=@game.team2.name%></h1></div>
-<div class="game_name"><h3 id="gamename"><%=@game.name%> at <%=@game.address%></h3></div>
+<div id="team_names"><h1><%=@game.team1.name%> vs. <%=@game.team2.name%></h1></div><hr />
+<div class="game_name"><h3 id="gamename"><%=@game.name%> at <%=@game.address%></h3><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="end_game">Leave Game</button></div>
+t
 <div class="col-md-2">
 <table id="team1_players" class="roster">
 <tr><th colspan="2"><%=@game.team1.name%></th></tr>

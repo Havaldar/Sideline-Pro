@@ -2,16 +2,16 @@
 	<% %>
 	<%= f.hidden_field :team1_id, :value => opponent_team%>
 	<%= f.label :name %>:
-	<%= f.text_field :name %>
-	<br/>
+	<div class= "game_form_1"><%= f.text_field :name %></div>
+	
 	<%= f.label :your_team%>:
-	<%= f.select(:team2_id, teams)%>
-	<br/>
+	<div class= "game_form_1"><%= f.select(:team2_id, teams)%></div>
+	
 	<%= f.label :address %>:
-	<%= f.text_field :address %>
-	<br/>
+	<div class= "game_form_1"><%= f.text_field :address %></div>
+	
 	<%= f.label :date %>:
-	<%= f.text_field :date, :class => "game_date_select" %>
+	<div class= "game_form_1"><%= f.text_field :date, :class => "game_date_select" %></div>
 	<br/>
 	<%= f.submit %>
 <% end %>
