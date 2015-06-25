@@ -48,8 +48,16 @@ a {
 	font-size: 30px;
 }
 
+.fa-futbol-o {
+	position: absolute;
+}
 
-
+.fa-futbol-o:before {
+	font-size: 24px;
+	color: #fff;
+	margin-top: -2px;
+	
+}
 .glyphicon {
 	color: #ffffff;
 }
