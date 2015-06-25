@@ -10,7 +10,7 @@
   margin-left: -350px;
   left: 350px;
   width: 350px;
-  background: white;
+  background-image: white;
   position: absolute;
   height: 100%;
   overflow-y: auto;
@@ -92,6 +92,8 @@ img.userpic {
 
 button.btn.btn-primary {
   margin-bottom: 15px;
+  background-color: #282E42;
+  border-color: #282E42;
 }
 
 .container {
@@ -102,6 +104,11 @@ button.btn.btn-primary {
   font-size: 30px;
   background: white;
   font-family: 'Open Sans Condensed', sans-serif;
+  width: 100%;
+  a {
+  text-decoration: none;
+}
+
 }
 #sidebar-wrapper img {
   height: 200px;
@@ -115,38 +122,34 @@ button.btn.btn-primary {
   padding: 10px;
 }
 
-.ui-widget-header {
-  background: none;
-}
-
-.ui-widget-content {
-  border: 0;
-}
-
 .editform {
   text-align: center;
 }
+
+#createteam {
+  border: 1px solid #A1CDA8;
+  margin-top: 15px;
+
+}
+
 .stat_box {
   margin-bottom: 0px;
 }
-.teamindexpic {
-  width: 200px;
-  height: 200px;
-}
 
 .user_stats_table {
-  margin-left: 45px;
+  margin-left: 30px;
   margin-top: 10px;
 
 }
 
 .user_stats_table td {
-  border-bottom: 1px solid #99A1A6;
+  border-bottom: 1px solid #518252;
 }
 
 .table_data {
-  background-color: #81A486;
-
+  background-color: #518252;
+  color: white;
+  padding: 10px;
 
 }
 
@@ -157,9 +160,15 @@ button.btn.btn-primary {
 
 .stats_index_1 {
   margin-left: 0px;
-  background-color: #81A486;
+  background-color: #518252;
   padding-left: 70px;
+  color: white;
 }
+
+.white_stats_index {
+  padding: 10px;
+}
+
 .sidebar_footer {
   border-top: 1px solid #eee;
   text-align: center;

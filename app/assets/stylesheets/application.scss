@@ -11,9 +11,11 @@
 @import "teamindex";
 @import "hover";
 
+a {
+	color: #282E42;
+}
 
 #container {
-	background-image: url(white_texture.png);
 	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
@@ -31,9 +33,8 @@
     left: 0;
     z-index: 1001;
     width: 100%;
-    background-color: #ffffff;
-    border-bottom: 0;
-	box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.4);;
+    background-color: #282E42;
+    border-bottom: 1px solid #ddd;
 }
 
 #q{
@@ -43,12 +44,12 @@
 
 #logo a {
 	text-decoration: none;
-	color: #81A486;
+	color: #ffffff;
 	font-size: 30px;
 }
 
 
 
 .glyphicon {
-	color: #81A486;
+	color: #ffffff;
 }

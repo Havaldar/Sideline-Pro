@@ -28,7 +28,7 @@ $(document).ready(function(){
 				data: data,
 				success: function(response) {
 					$("#notifications").prepend(response);
-					$("#notifications").animate( { height: "show" }, 2000, "easeOutBounce");
+					$($('.stat_box')[0]).slideDown();
 				},
 				dataType: "html"
 			});
@@ -37,7 +37,7 @@ $(document).ready(function(){
 		});		
 	});
 	$('.player_image').tooltip();
-	$('.stat_box').fadeIn();
+	
 });
 
 var game = {

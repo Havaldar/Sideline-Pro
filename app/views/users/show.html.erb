@@ -1,6 +1,15 @@
 <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 
-
+<script type="text/javascript">
+    $('#usertabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        e.target; // newly activated tab
+        e.relatedTarget; // previous active tab
+    });
+</script>
 
 <div id="wrapper">
     <div id="sidebar-wrapper">
@@ -15,13 +24,13 @@
             <div class="user_stats_table">
                 <table>
                     <tr><td class="table_data">Appearances</td><td class="stats_index_1"><%=@user.statistics.length%></td></tr>
-                    <tr><td>Goals</td><td class="stats_index"><%=@goals%></td></tr>
+                    <tr><td class="white_stats_index">Goals</td><td class="stats_index"><%=@goals%></td></tr>
                     <tr><td class="table_data">Assists</td><td class="stats_index_1"><%=@assists%></td></tr>
-                    <tr><td >Fouls</td><td class="stats_index"><%=@fouls%></td></tr>
+                    <tr><td class="white_stats_index">Fouls</td><td class="stats_index"><%=@fouls%></td></tr>
                     <tr><td class="table_data">Yellow Cards</td><td class="stats_index_1"><%=@yellow_cards%></td></tr>
-                    <tr><td>Red Cards</td><td class="stats_index"><%=@red_cards%></td></tr>
+                    <tr><td class="white_stats_index">Red Cards</td><td class="stats_index"><%=@red_cards%></td></tr>
                     <tr><td class="table_data">Offsides</td><td class="stats_index_1"><%=@offsides%></td></tr>
-                    <tr><td>Shots</td><td class="stats_index"><%=@shots%></td></tr>
+                    <tr><td class="white_stats_index">Shots</td><td class="stats_index"><%=@shots%></td></tr>
                     <tr><td class="table_data">Shots on Goal</td><td class="stats_index_1"><%=@shots_on_target%></td></tr>
                 </table>
             </div>
@@ -35,16 +44,15 @@
     <div id="page-content-wrapper">
         <div class="page-content">
             <div class="container">
-                <div id="tabs">
-                    <ul class="nav nav-tabs" id="usertabs">
-                        <li role="presentation" class="active"><a href="#tab-1">Your Teams</a></li>
-                        <li role="presentation"><a href="#tab-2">Your Games</a></li>
-                    </ul>
-                  
-                    <div id="tab-1">
+                <ul class="nav nav-tabs" role="tablist" id="usertabs">
+                    <li role="presentation" class="active"><a href="#tab-1" aria-controls="tab-1" role="tab" data-toggle="tab">Your Teams</a></li>
+                    <li role="presentation"><a href="#tab-2" aria-controls="tab-2" role="tab" data-toggle="tab">Your Games</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
                         <div class="row">
                             <div class="col-md-12">
-                               <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                               <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="createteam">
           						Create A New Team
         						</button>
         						<div class="collapse" id="collapseExample">
@@ -53,25 +61,31 @@
         						  </div>
         						</div>
         						<%@user.teams.each do |team|%>
-        							<div class="well" id="teams">
-        							<%= link_to team.name, team %>
+                                    <a href=<%=team_path(team)%> id="teamtext">
+        							<div class="well hvr-sweep-to-bottom" id="teams">
+        							     <%=team.name%>
         							</div>
+                                    </a>
         						<%end%>
                             </div>
                         </div>
                     </div>    
-                    <div id="tab-2">
+                    <div role="tabpanel" class="tab-pane fade" id="tab-2">
                         <div class="row">
                             <div class="col-md-12">
                                 <%@games.each do |game|%>
-                                    <div class="well" id="teams">
-                                    <%= link_to game.name, game %>
+                                    <%if !(game == nil)%>
+                                    <a href=<%= game_path(game)%>>
+                                    <div class="well hvr-sweep-to-bottom" id="teams">
+                                        <%=game.name%>
                                     </div>
+                                    </a>
+                                    <%end%>
                                 <%end%>
                             </div>
                         </div>    
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     </div>
@@ -82,6 +96,4 @@
   </div>
 </div>
 
-<script type="text/javascript">
-    $("#tabs").tabs();
-</script>
+

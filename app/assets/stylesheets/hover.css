@@ -1391,7 +1391,7 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #A1CDA8;
+  background-color: #518252;
   color: white;
 }
 
@@ -1542,6 +1542,7 @@
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+
 }
 .hvr-sweep-to-bottom:before {
   content: "";
@@ -1551,7 +1552,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098d1;
+  background: #282E42;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 0;
@@ -2669,7 +2670,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #81A486;
+  background: #1C6623;
   height: 4px;
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
