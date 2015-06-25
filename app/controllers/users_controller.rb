@@ -4,17 +4,25 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@team = Team.new
-		@user.statistics.map do |statistic|
-			@user.goals += statistic.goals
-			@user.assists += statistic.assists
-			@user.fouls += statistic.fouls
-			@user.red_cards += statistic.red_cards
-			@user.yellow_cards += statistic.yellow_cards
-			@user.shots += statistic.shots
-			@user.shots_on_target += statistic.shots_on_target
-			@user.offsides += statistic.offsides
+		@goals = 0
+		@assists = 0
+		@fouls = 0
+		@red_cards = 0
+		@yellow_cards = 0
+		@shots = 0
+		@shots_on_target = 0
+		@offsides = 0
+
+		@user.statistics.each do |statistic|
+			@goals += statistic.goals
+			@assists += statistic.assists
+			@fouls += statistic.fouls
+			@red_cards += statistic.red_cards
+			@yellow_cards += statistic.yellow_cards
+			@shots += statistic.shots
+			@shots_on_target += statistic.shots_on_target
+			@offsides += statistic.offsides
 		end
-		@user.save!
 		@games = @user.statistics.map do |s| 
 			s.game
 		end
