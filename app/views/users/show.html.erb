@@ -21,6 +21,17 @@
 			<div class="userinfo">
 				<%= link_to 'Edit Profile', edit_user_registration_path %>
 			</div>
+            <table>
+                <tr><td>Appearances</td><td><%=@user.statistics.length%></td></tr>
+                <tr><td>Goals</td><td><%=@goals%></td></tr>
+                <tr><td>Assists</td><td><%=@assists%></td></tr>
+                <tr><td>Fouls</td><td><%=@fouls%></td></tr>
+                <tr><td>Yellow Cards</td><td><%=@yellow_cards%></td></tr>
+                <tr><td>Red Cards</td><td><%=@red_cards%></td></tr>
+                <tr><td>Offsides</td><td><%=@offsides%></td></tr>
+                <tr><td>Shots</td><td><%=@shots%></td></tr>
+                <tr><td>Shots on Goal</td><td><%=@shots_on_target%></td></tr>
+            </table>
         </ul>
     </div>
     <div class ="verticalLine">
@@ -44,8 +55,8 @@
         						    <%= render :partial => '/layouts/team_form', :locals => {:team => @team} %>
         						  </div>
         						</div>
-        						<%@user_teams.each do |team|%>
-        							<div class="well hvr-bounce-to-right" id="teams">
+        						<%@user.teams.each do |team|%>
+        							<div class="well" id="teams">
         							<%= link_to team.name, team %>
         							</div>
         						<%end%>
@@ -55,7 +66,11 @@
                     <div role="tabpanel" class="tab-pane fade" id="tab-2">
                         <div class="row">
                             <div class="col-md-12">
-                            <p> kghljhgkjhgkhg</p>
+                                <%@games.each do |game|%>
+                                    <div class="well" id="teams">
+                                    <%= link_to game.name, game %>
+                                    </div>
+                                <%end%>
                             </div>
                         </div>    
                     </div>

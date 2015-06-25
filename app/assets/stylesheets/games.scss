@@ -11,7 +11,6 @@ h1, h2 {
  	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 #football_field td{
   width: 20px;
   height: 20px;
@@ -66,4 +65,9 @@ td.dead {
 .roster th{
 	padding: 10px;
 	border-bottom: black solid 1px;
+}
+#notifications {
+	width: 60%;
+	margin: 0 auto;
+	height: 300px;
 }
