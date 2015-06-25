@@ -11,10 +11,12 @@ $(document).ready(function(){
 	$('.roster td').droppable({
 		accept: '.player_image'
 	});
+
 	$('.player_image').dblclick(function(event) {
 		var player = event.target
 		$('#modal_form').modal('show');
 		$('.event_button').click(function(event){
+			$('.event_button').unbind("click");
 			var data = {
 				player_id: parseInt(player.id),
 				game_id: parseInt(event.target.name),
@@ -33,8 +35,8 @@ $(document).ready(function(){
 				dataType: "html"
 			});
 			$('#modal_form').modal('hide');
-		});
-		$(".player_image").off("dblclick", ".player_image");
+			$(".event_button").off("click", ".event_button");
+		});		
 	});
 	$('.player_image').tooltip();
 });

@@ -93,6 +93,7 @@ button.btn.btn-primary {
 #teams {
   font-size: 30px;
   background: white;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 #sidebar-wrapper img {
   height: 200px;
@@ -106,8 +107,12 @@ button.btn.btn-primary {
   padding: 10px;
 }
 
-#usertabs {
-  color: red;
+.ui-widget-header {
+  background: none;
+}
+
+.ui-widget-content {
+  border: 0;
 }
 
 .editform {
