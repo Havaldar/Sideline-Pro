@@ -3,19 +3,21 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	height: 650px;
+	height: 700px;
 }
 
 .container.main {
 	position: relative;
 	top: 10px;
 	margin-left: 150px;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	width: 700px;
 }
 
 .jumbotron h1 {
 	color: #fff;
-	font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	text-align: left;
 }
 
@@ -25,6 +27,7 @@
 
 .btn-primary {
 	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
 }
 
 .header {
@@ -33,6 +36,11 @@
 
 h1 {
 	padding: 10px;
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	font-family: 'Raleway', sans-serif;
 }
 
 #loginbox {
@@ -95,6 +103,8 @@ h1 {
     filter: alpha(opacity=40);
     border-radius: 5px;
     font-family: 'Abel', sans-serif;
+	box-shadow: 0px 10px 24px 6px rgba(0,0,0,0.69);
+
 }
 .page_third_header h1 {
 	text-align: center;
@@ -107,11 +117,12 @@ h1 {
 .page_third_header p {
 	text-align: center;
 	color: white;
+
 	
 }
 .welcome_page_footer {
 	margin-top: -30px;
-	background-color: #89B0AE;
+	background-color: #518252;
 	height: 150px;
 	margin-bottom: -30px;
 

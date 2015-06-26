@@ -29,6 +29,11 @@ h3#gamename {
 	text-align: center;
 }
 
+#end_game {
+	margin-bottom: 10px; 
+	background-color: #518252;
+}
+
 td.alive {
   background-color: #000;
 }
@@ -44,11 +49,14 @@ td.dead {
 }
 #team1_players {
  	float: right;
- 	width: 100px;
+ 	width: 280px;
+ 	margin-right: -100px;
 }
+
 #team2_players {
  	float: left;
- 	width: 100px;
+ 	width: 280px;
+ 	margin-left: -100px;
 }
 .team2_player {
 	border: solid 1px red;
